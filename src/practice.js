@@ -1,21 +1,8 @@
-const x = 1;
+const dropDown = document.querySelector(".dropbtn")
 
-    function a() {
-      const y = 2;
-      output(y);
-    }
+const dropDownBtn = document.querySelector(".dropdown-content")
 
-    function b() {
-      const z = 3;
-      output(z);
-    }
 
-    function output(value) {
-      const para = document.createElement('p');
-      document.body.appendChild(para);
-      para.textContent = `Value: ${value}`;
-    }
-    a();
-    b();
-    
-   
+
+
+console.log(dropdown)
