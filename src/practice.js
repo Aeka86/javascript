@@ -1,21 +1,26 @@
-//DATE
-const display = document.querySelector(".date")
+// // .sort()
 
+// const planets = ["Mars", "Jupiter", "Uranus", "Earth"]
 
-const today = new Date()
-const date = today.getDate() // shows todays date
-const day = today.getDay() //shows todays day
-const fullYear = today.getFullYear()
-const hours = today.getHours()
-const isoString = today.toISOString()
-console.log(isoString)
-const christmas = new Date("2023-12-24T10:19:42.563Z")
-console.log(christmas - today)
-const millSec = christmas - today
+// console.log(planets.sort())
+// //it sorts all the words alphabetically
 
-const minutes = millSec / 60000
+// const ages = [32, 45, 56, 13, 99, 78]
 
-display.innerHTML = Math.round(minutes)
+// console.log(ages.sort())
 
-console.log(minutes)
-
+// //it sorts the numbers from small to big
+let lat = "";
+let lan = "";
+const apiKey = "281f73a21cef625e8324805ad66f649b";
+const apiUrl =
+  "https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={apiKey}";
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("submit").onclick = function () {
+    fetch(apiUrl)
+      .then((response) => response.json())
+      .then((data) => {
+        document.getElementById("message").innerHTML = JSON.stringify(data);
+      });
+  };
+});
